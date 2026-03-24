@@ -15,7 +15,7 @@
 
 Подробности: `WebInstaller/README.md`, `FilesPServ/README.md`.
 
-## Статистика по запускам (требование задания)
+## Статистика по запускам
 
 После накопления записей в БД:
 
@@ -25,16 +25,3 @@ py -m scripts.calc_stats
 ```
 
 Создаётся `stats_results.csv` с процентами по elevation и успешным запускам. Пример формата: `FilesPServ/stats_results.sample.csv`.
-
-## Git: отправка на удалённый репозиторий
-
-После первого коммита (уже сделан в этом шаблоне — выполните у себя):
-
-```bat
-cd путь\к\TestProject
-git remote add origin https://github.com/ВАШ_ЛОГИН/ВАШ_РЕПО.git
-git branch -M main
-git push -u origin main
-```
-
-Замените URL на свой (GitHub, GitLab и т.д.).
