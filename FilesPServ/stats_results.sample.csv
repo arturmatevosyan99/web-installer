@@ -1,0 +1,5 @@
+metric,count,percent
+total,10,100
+elevation_granted,6,60.00
+elevation_denied,4,40.00
+launch_success,10,100.00

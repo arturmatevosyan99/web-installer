@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\src">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFC}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\webinstaller">
+      <UniqueIdentifier>{A1B2C3D4-E5F6-7890-ABCD-EF1234567891}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utils.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WinINetHttpClient.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResourceFileProvider.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ElevationManager.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FileLauncher.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InstallerController.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MainWindow.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\webinstaller\Config.h">
+      <Filter>Header Files\webinstaller</Filter>
+    </ClInclude>
+    <ClInclude Include="include\webinstaller\ElevationManager.h">
+      <Filter>Header Files\webinstaller</Filter>
+    </ClInclude>
+    <ClInclude Include="include\webinstaller\FileLauncher.h">
+      <Filter>Header Files\webinstaller</Filter>
+    </ClInclude>
+    <ClInclude Include="include\webinstaller\IHttpClient.h">
+      <Filter>Header Files\webinstaller</Filter>
+    </ClInclude>
+    <ClInclude Include="include\webinstaller\IFileProvider.h">
+      <Filter>Header Files\webinstaller</Filter>
+    </ClInclude>
+    <ClInclude Include="include\webinstaller\IProgressCallback.h">
+      <Filter>Header Files\webinstaller</Filter>
+    </ClInclude>
+    <ClInclude Include="include\webinstaller\InstallerController.h">
+      <Filter>Header Files\webinstaller</Filter>
+    </ClInclude>
+    <ClInclude Include="include\webinstaller\MainWindow.h">
+      <Filter>Header Files\webinstaller</Filter>
+    </ClInclude>
+    <ClInclude Include="include\webinstaller\ResourceFileProvider.h">
+      <Filter>Header Files\webinstaller</Filter>
+    </ClInclude>
+    <ClInclude Include="include\webinstaller\types.h">
+      <Filter>Header Files\webinstaller</Filter>
+    </ClInclude>
+    <ClInclude Include="include\webinstaller\Utils.h">
+      <Filter>Header Files\webinstaller</Filter>
+    </ClInclude>
+    <ClInclude Include="include\webinstaller\WinINetHttpClient.h">
+      <Filter>Header Files\webinstaller</Filter>
+    </ClInclude>
+    <None Include="resource.h">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

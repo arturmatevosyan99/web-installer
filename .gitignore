@@ -1,0 +1,35 @@
+# Build (Visual Studio / MSBuild)
+**/bin/
+**/obj/
+**/.vs/
+*.user
+*.aps
+*.pch
+*.obj
+*.zip
+*.ipch
+*.VC.db
+*.VC.VC.opendb
+
+# Python
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+**/.venv/
+**/venv/
+**/filepserv_env/
+
+# Runtime / local data (recreated by server)
+FilesPServ/Queries.db
+FilesPServ/stats_results.csv
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+Desktop.ini
