@@ -24,7 +24,7 @@ cd FilesPServ
 py -m scripts.calc_stats
 ```
 
-Создаётся `stats_results.csv` с процентами по elevation и успешным запускам.
+Создаётся `stats_results.csv` с процентами по elevation и успешным запускам. Пример формата: `FilesPServ/stats_results.sample.csv`.
 
 ## Git: отправка на удалённый репозиторий
 

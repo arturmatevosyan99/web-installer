@@ -31,7 +31,7 @@ bool ElevationManager::TryElevate(int argc, wchar_t** argv) {
     GetModuleFileNameW(nullptr, path, MAX_PATH);
     wchar_t dir[MAX_PATH];
     wcscpy_s(dir, path);
-    for (int i = (int)wcslen(dir) - 1; i >= 0; i--) {
+    for (int i = static_cast<int>(wcslen(dir)) - 1; i >= 0; i--) {
         if (dir[i] == L'\\') {
             dir[i] = 0;
             break;
