@@ -129,16 +129,16 @@ LRESULT MainWindow::HandleMessage(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lPa
 
         m_hEditUrl = reinterpret_cast<HWND__*>(CreateWindowExW(WS_EX_CLIENTEDGE, L"EDIT", Config::DEFAULT_URL,
             WS_CHILD | WS_VISIBLE | ES_AUTOHSCROLL, 10, 10, 380, 24, reinterpret_cast<HWND>(m_hWnd),
-            (HMENU)IDC_EDIT_URL, nullptr, nullptr));
+            reinterpret_cast<HMENU>(static_cast<INT_PTR>(IDC_EDIT_URL)), nullptr, nullptr));
         m_hBtnGo = reinterpret_cast<HWND__*>(CreateWindowExW(0, L"BUTTON", L"Download and Run",
             WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON, 10, 44, 150, 28, reinterpret_cast<HWND>(m_hWnd),
-            (HMENU)IDC_BTN_GO, nullptr, nullptr));
+            reinterpret_cast<HMENU>(static_cast<INT_PTR>(IDC_BTN_GO)), nullptr, nullptr));
         m_hProgress = reinterpret_cast<HWND__*>(CreateWindowExW(0, PROGRESS_CLASSW, nullptr,
             WS_CHILD | WS_VISIBLE | PBS_SMOOTH, 10, 82, 380, 24, reinterpret_cast<HWND>(m_hWnd),
-            (HMENU)IDC_PROGRESS, nullptr, nullptr));
+            reinterpret_cast<HMENU>(static_cast<INT_PTR>(IDC_PROGRESS)), nullptr, nullptr));
         m_hStatus = reinterpret_cast<HWND__*>(CreateWindowExW(0, L"STATIC", L"Ready",
             WS_CHILD | WS_VISIBLE, 10, 116, 380, 20, reinterpret_cast<HWND>(m_hWnd),
-            (HMENU)IDC_STATIC_STATUS, nullptr, nullptr));
+            reinterpret_cast<HMENU>(static_cast<INT_PTR>(IDC_STATIC_STATUS)), nullptr, nullptr));
         SendMessageW(reinterpret_cast<HWND>(m_hProgress), PBM_SETRANGE, 0, MAKELPARAM(0, 100));
         break;
     }
@@ -187,7 +187,7 @@ bool MainWindow::Create(int nCmdShow) {
     wc.lpfnWndProc = WndProc;
     wc.hInstance = GetModuleHandleW(nullptr);
     wc.hCursor = LoadCursor(nullptr, IDC_ARROW);
-    wc.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
+    wc.hbrBackground = reinterpret_cast<HBRUSH>(static_cast<LONG_PTR>(COLOR_WINDOW + 1));
     wc.lpszClassName = L"WebInstallerClass";
     RegisterClassExW(&wc);
 
@@ -208,7 +208,7 @@ int MainWindow::MessageLoop() {
         TranslateMessage(&msg);
         DispatchMessage(&msg);
     }
-    return (int)msg.wParam;
+    return static_cast<int>(msg.wParam);
 }
 
 }  // namespace webinstaller
